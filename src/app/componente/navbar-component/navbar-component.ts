@@ -1,0 +1,44 @@
+import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { Router, RouterModule } from '@angular/router';
+
+@Component({
+  selector: 'app-navbar-component',
+  imports: [CommonModule, RouterModule,
+     MatIconModule,
+      MatToolbarModule,
+       MatMenuModule,
+        MatButtonModule],
+  templateUrl: './navbar-component.html',
+  styleUrl: './navbar-component.css',
+})
+export class NavbarComponent {
+  userName: string = '';
+  cartItemCount: number = 0; // cantidad inicial del carrito
+  showMenu = false;
+
+  constructor(private router: Router) {
+    this.userName = localStorage.getItem('user') || '';
+  } 
+
+  ngOnInit() {}
+
+  toggleMenu(): void {
+    this.showMenu = !this.showMenu;
+  }
+  closeMenu(): void {
+    this.showMenu = false;
+  }
+
+  // ==================== SOLUCIÓN AL ERROR ====================
+  @HostListener('document:keydown.escape')
+  onEscKeydown() {
+    this.closeMenu();
+  }
+
+
+}

@@ -1,0 +1,685 @@
+<div class="home-container">
+
+<!-- Hero Slider -->
+<section id="hero" class="hero-slider">
+  <div class="slides-container">
+    <div class="slide" 
+         *ngFor="let img of heroImages; let i = index"
+         [class.active]="i === currentImage">
+      <img [src]="img" class="hero-img" alt="JHONAX">
+    </div>
+  </div>
+
+  <div class="hero-overlay">
+    <h1 class="hero-title">Bienvenido a JHONAX</h1>
+    <p class="hero-subtitle">Excelencia Textil sin Límites</p>
+  </div>
+</section>
+
+<!-- Sobre Nosotros -->
+<section id="nosotros" class="about-section">
+  <div class="about-container">
+    
+    <!-- Contenido izquierdo - Texto -->
+    <div class="about-content">
+      <div class="about-header">
+        <span class="about-badge">Conócenos</span>
+        <h2 class="about-title">Sobre <span class="highlight">Nosotros</span></h2>
+        <div class="about-divider"></div>
+      </div>
+
+      <div class="about-features">
+        <!-- Feature 1 -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <mat-icon>history</mat-icon>
+          </div>
+          <div class="feature-text">
+            <h4 class="feature-title">+20 Años de Experiencia</h4>
+            <p class="feature-description">
+              Más de dos décadas consolidándonos como referente de calidad y confianza en el mercado textil global.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <mat-icon>verified</mat-icon>
+          </div>
+          <div class="feature-text">
+            <h4 class="feature-title">Compromiso con la Calidad</h4>
+            <p class="feature-description">
+              Productos que cumplen los más altos estándares, garantizando la satisfacción total de nuestros clientes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <mat-icon>eco</mat-icon>
+          </div>
+          <div class="feature-text">
+            <h4 class="feature-title">Innovación y Sostenibilidad</h4>
+            <p class="feature-description">
+              Procesos innovadores y prácticas sostenibles para minimizar nuestro impacto ambiental.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Años de Experiencia</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Clientes Satisfechos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Países</span>
+        </div>
+      </div>
+
+      <!-- Botón CTA -->
+      <button mat-raised-button class="about-btn">
+        Conoce más
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+
+    <!-- Contenido derecho - Imagen -->
+    <div class="about-image-wrapper">
+      <div class="about-image-container">
+        <img src="nosotros.jpg" alt="Sobre Nosotros" class="about-image">
+        <div class="image-overlay"></div>
+        <div class="image-badge">
+          <mat-icon>verified_user</mat-icon>
+          <span>Calidad Garantizada</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="services-section">
+  <div class="services-container">
+    <div class="services-header">
+      <span class="services-badge">Nuestros Servicios</span>
+      <h2 class="services-title">Soluciones <span class="highlight">Integrales</span> para tu Negocio</h2>
+      <div class="services-divider"></div>
+      <p class="services-subtitle">
+        Ofrecemos servicios de alta calidad adaptados a las necesidades específicas de cada cliente
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Servicio 1 -->
+      <div class="service-card">
+        <div class="service-card-inner">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-bg"></div>
+            <mat-icon class="service-icon">local_shipping</mat-icon>
+          </div>
+          <div class="service-number">01</div>
+          <h4 class="service-card-title">Logística Eficiente</h4>
+          <p class="service-card-description">
+            Soluciones logísticas integrales para garantizar entregas rápidas y seguras a nivel global.
+          </p>
+          <div class="service-hover-line"></div>
+          <a href="#" class="service-link">Saber más →</a>
+        </div>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="service-card">
+        <div class="service-card-inner">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-bg"></div>
+            <mat-icon class="service-icon">support_agent</mat-icon>
+          </div>
+          <div class="service-number">02</div>
+          <h4 class="service-card-title">Atención Personalizada</h4>
+          <p class="service-card-description">
+            Un equipo dedicado a brindar soporte y asesoramiento personalizado para cada cliente.
+          </p>
+          <div class="service-hover-line"></div>
+          <a href="#" class="service-link">Saber más →</a>
+        </div>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="service-card">
+        <div class="service-card-inner">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-bg"></div>
+            <mat-icon class="service-icon">build</mat-icon>
+          </div>
+          <div class="service-number">03</div>
+          <h4 class="service-card-title">Desarrollo de Productos</h4>
+          <p class="service-card-description">
+            Colaboramos en el desarrollo de productos personalizados que se ajusten a las necesidades del mercado.
+          </p>
+          <div class="service-hover-line"></div>
+          <a href="#" class="service-link">Saber más →</a>
+        </div>
+      </div>
+
+      <!-- Servicio 4 - Extra para completar grid -->
+      <div class="service-card">
+        <div class="service-card-inner">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-bg"></div>
+            <mat-icon class="service-icon">quality</mat-icon>
+          </div>
+          <div class="service-number">04</div>
+          <h4 class="service-card-title">Control de Calidad</h4>
+          <p class="service-card-description">
+            Rigurosos estándares de calidad en cada etapa del proceso productivo.
+          </p>
+          <div class="service-hover-line"></div>
+          <a href="#" class="service-link">Saber más →</a>
+        </div>
+      </div>
+
+      <!-- Servicio 5 -->
+      <div class="service-card">
+        <div class="service-card-inner">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-bg"></div>
+            <mat-icon class="service-icon">recycling</mat-icon>
+          </div>
+          <div class="service-number">05</div>
+          <h4 class="service-card-title">Prácticas Sostenibles</h4>
+          <p class="service-card-description">
+            Compromiso con el medio ambiente mediante procesos eco-amigables.
+          </p>
+          <div class="service-hover-line"></div>
+          <a href="#" class="service-link">Saber más →</a>
+        </div>
+      </div>
+
+      <!-- Servicio 6 -->
+      <div class="service-card">
+        <div class="service-card-inner">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-bg"></div>
+            <mat-icon class="service-icon">trending_up</mat-icon>
+          </div>
+          <div class="service-number">06</div>
+          <h4 class="service-card-title">Consultoría Estratégica</h4>
+          <p class="service-card-description">
+            Asesoramiento experto para optimizar tus procesos y aumentar tu competitividad.
+          </p>
+          <div class="service-hover-line"></div>
+          <a href="#" class="service-link">Saber más →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón CTA -->
+    <div class="services-cta">
+      <button mat-raised-button class="services-btn">
+        Solicitar información
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ¿Por qué elegirnos? -->
+<section id="eligenos" class="why-choose-section">
+  <div class="why-choose-container">
+    
+    <div class="why-choose-header">
+      <span class="why-choose-badge">Ventajas Competitivas</span>
+      <h2 class="why-choose-title">¿Por qué <span class="highlight">elegirnos</span>?</h2>
+      <div class="why-choose-divider"></div>
+      <p class="why-choose-subtitle">
+        Descubre las razones que nos convierten en tu mejor opción en la industria textil
+      </p>
+    </div>
+
+    <div class="why-choose-grid">
+      <!-- Item 1 -->
+      <div class="choose-card">
+        <div class="choose-card-inner">
+          <div class="choose-number">01</div>
+          <div class="choose-icon-wrapper">
+            <div class="choose-icon-bg"></div>
+            <mat-icon class="choose-icon">thumb_up</mat-icon>
+          </div>
+          <h4 class="choose-title">Satisfacción Garantizada</h4>
+          <p class="choose-description">
+            Nos comprometemos a superar las expectativas de nuestros clientes con productos y servicios de alta calidad.
+          </p>
+          <div class="choose-hover-line"></div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="choose-card">
+        <div class="choose-card-inner">
+          <div class="choose-number">02</div>
+          <div class="choose-icon-wrapper">
+            <div class="choose-icon-bg"></div>
+            <mat-icon class="choose-icon">group</mat-icon>
+          </div>
+          <h4 class="choose-title">Equipo Experto</h4>
+          <p class="choose-description">
+            Contamos con un equipo de profesionales altamente capacitados y apasionados por la excelencia.
+          </p>
+          <div class="choose-hover-line"></div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="choose-card">
+        <div class="choose-card-inner">
+          <div class="choose-number">03</div>
+          <div class="choose-icon-wrapper">
+            <div class="choose-icon-bg"></div>
+            <mat-icon class="choose-icon">public</mat-icon>
+          </div>
+          <h4 class="choose-title">Comunicación Efectiva</h4>
+          <p class="choose-description">
+            Trabajamos en estrecha colaboración con nuestros clientes para entender sus necesidades y ofrecer soluciones personalizadas.
+          </p>
+          <div class="choose-hover-line"></div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="choose-card">
+        <div class="choose-card-inner">
+          <div class="choose-number">04</div>
+          <div class="choose-icon-wrapper">
+            <div class="choose-icon-bg"></div>
+            <mat-icon class="choose-icon">verified</mat-icon>
+          </div>
+          <h4 class="choose-title">Compromiso con la Calidad</h4>
+          <p class="choose-description">
+            Ofrecemos productos que cumplen con los más altos estándares de calidad, garantizando la satisfacción total.
+          </p>
+          <div class="choose-hover-line"></div>
+        </div>
+      </div>
+
+      <!-- Item 5 - Nuevo -->
+      <div class="choose-card">
+        <div class="choose-card-inner">
+          <div class="choose-number">05</div>
+          <div class="choose-icon-wrapper">
+            <div class="choose-icon-bg"></div>
+            <mat-icon class="choose-icon">schedule</mat-icon>
+          </div>
+          <h4 class="choose-title">Entregas a Tiempo</h4>
+          <p class="choose-description">
+            Garantizamos puntualidad en cada entrega gracias a nuestra logística optimizada y planificación eficiente.
+          </p>
+          <div class="choose-hover-line"></div>
+        </div>
+      </div>
+
+      <!-- Item 6 - Nuevo -->
+      <div class="choose-card">
+        <div class="choose-card-inner">
+          <div class="choose-number">06</div>
+          <div class="choose-icon-wrapper">
+            <div class="choose-icon-bg"></div>
+            <mat-icon class="choose-icon">support</mat-icon>
+          </div>
+          <h4 class="choose-title">Soporte 24/7</h4>
+          <p class="choose-description">
+            Atención continua y asistencia personalizada para resolver cualquier consulta o necesidad.
+          </p>
+          <div class="choose-hover-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estadísticas adicionales -->
+    <div class="why-choose-stats">
+      <div class="stat-block">
+        <div class="stat-circle">
+          <span class="stat-number">20+</span>
+        </div>
+        <span class="stat-label">Años de experiencia</span>
+      </div>
+      <div class="stat-block">
+        <div class="stat-circle">
+          <span class="stat-number">500+</span>
+        </div>
+        <span class="stat-label">Clientes satisfechos</span>
+      </div>
+      <div class="stat-block">
+        <div class="stat-circle">
+          <span class="stat-number">50+</span>
+        </div>
+        <span class="stat-label">Países</span>
+      </div>
+      <div class="stat-block">
+        <div class="stat-circle">
+          <span class="stat-number">100%</span>
+        </div>
+        <span class="stat-label">Compromiso</span>
+      </div>
+    </div>
+
+    <!-- Botón CTA -->
+    <div class="why-choose-cta">
+      <button mat-raised-button class="why-choose-btn">
+        Contáctanos
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Blog -->
+<section id="blog" class="blog-section">
+  <div class="blog-container">
+    
+    <div class="blog-header">
+      <span class="blog-badge">Nuestro Blog</span>
+      <h2 class="blog-title">Últimas <span class="highlight">Noticias</span> y <span class="highlight">Tendencias</span></h2>
+      <div class="blog-divider"></div>
+      <p class="blog-subtitle">
+        Mantente informado sobre las novedades de la industria textil, consejos y tendencias con nuestro blog
+      </p>
+    </div>
+
+    <div class="blog-grid">
+      <!-- Post 1 -->
+      <article class="blog-card">
+        <div class="blog-image-wrapper">
+          <img src="assets/images/blog1.jpg" alt="Tendencias en Moda Sostenible" class="blog-image">
+          <div class="blog-overlay">
+            <span class="blog-category">Tendencias</span>
+          </div>
+          <div class="blog-date">
+            <span class="date-day">15</span>
+            <span class="date-month">Mar</span>
+          </div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="meta-item">
+              <mat-icon>person</mat-icon>
+              Admin
+            </span>
+            <span class="meta-item">
+              <mat-icon>comment</mat-icon>
+              3 Comentarios
+            </span>
+          </div>
+          <h4 class="blog-post-title">Tendencias en Moda Sostenible para 2024</h4>
+          <p class="blog-description">
+            Descubre las últimas tendencias en moda sostenible y cómo están transformando la industria textil global.
+          </p>
+          <a href="#" class="blog-link">
+            Leer más
+            <mat-icon>arrow_forward</mat-icon>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="blog-card">
+        <div class="blog-image-wrapper">
+          <img src="assets/images/blog2.jpg" alt="Cómo Elegir el Mejor Proveedor Textil" class="blog-image">
+          <div class="blog-overlay">
+            <span class="blog-category">Consejos</span>
+          </div>
+          <div class="blog-date">
+            <span class="date-day">22</span>
+            <span class="date-month">Feb</span>
+          </div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="meta-item">
+              <mat-icon>person</mat-icon>
+              Admin
+            </span>
+            <span class="meta-item">
+              <mat-icon>comment</mat-icon>
+              5 Comentarios
+            </span>
+          </div>
+          <h4 class="blog-post-title">Cómo Elegir el Mejor Proveedor Textil</h4>
+          <p class="blog-description">
+            Consejos clave para seleccionar un proveedor textil confiable y de calidad para tu negocio.
+          </p>
+          <a href="#" class="blog-link">
+            Leer más
+            <mat-icon>arrow_forward</mat-icon>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="blog-card">
+        <div class="blog-image-wrapper">
+          <img src="assets/images/blog3.jpg" alt="Innovaciones Tecnológicas en la Industria Textil" class="blog-image">
+          <div class="blog-overlay">
+            <span class="blog-category">Innovación</span>
+          </div>
+          <div class="blog-date">
+            <span class="date-day">10</span>
+            <span class="date-month">Ene</span>
+          </div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="meta-item">
+              <mat-icon>person</mat-icon>
+              Admin
+            </span>
+            <span class="meta-item">
+              <mat-icon>comment</mat-icon>
+              8 Comentarios
+            </span>
+          </div>
+          <h4 class="blog-post-title">Innovaciones Tecnológicas en la Industria Textil</h4>
+          <p class="blog-description">
+            Explora las últimas innovaciones tecnológicas que están revolucionando la producción textil.
+          </p>
+          <a href="#" class="blog-link">
+            Leer más
+            <mat-icon>arrow_forward</mat-icon>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="blog-card">
+        <div class="blog-image-wrapper">
+          <img src="assets/images/blog4.jpg" alt="Beneficios de la Moda Sostenible" class="blog-image">
+          <div class="blog-overlay">
+            <span class="blog-category">Sostenibilidad</span>
+          </div>
+          <div class="blog-date">
+            <span class="date-day">28</span>
+            <span class="date-month">Dic</span>
+          </div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="meta-item">
+              <mat-icon>person</mat-icon>
+              Admin
+            </span>
+            <span class="meta-item">
+              <mat-icon>comment</mat-icon>
+              12 Comentarios
+            </span>
+          </div>
+          <h4 class="blog-post-title">Beneficios de la Moda Sostenible</h4>
+          <p class="blog-description">
+            Conoce los beneficios ambientales y sociales de adoptar prácticas de moda sostenible.
+          </p>
+          <a href="#" class="blog-link">
+            Leer más
+            <mat-icon>arrow_forward</mat-icon>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Botón CTA -->
+    <div class="blog-cta">
+      <button mat-raised-button class="blog-btn">
+        Ver todos los artículos
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Fila superior -->
+    <div class="footer-top">
+      
+      <!-- Columna 1 - Logo y descripción -->
+      <div class="footer-col footer-col-brand">
+        <div class="footer-logo">
+          <mat-icon class="footer-logo-icon">storefront</mat-icon>
+          <div class="footer-logo-text">
+            <span class="footer-logo-name">JHONAX</span>
+            <span class="footer-logo-subtitle">DESKTOP • LANDING</span>
+          </div>
+        </div>
+        <p class="footer-description">
+          Líderes en soluciones textiles de alta calidad, comprometidos con la innovación, 
+          la sostenibilidad y la satisfacción de nuestros clientes a nivel global.
+        </p>
+        <div class="footer-contact-info">
+          <div class="contact-info-item">
+            <mat-icon>location_on</mat-icon>
+            <span>Av. Industrial 123, Ciudad Textil</span>
+          </div>
+          <div class="contact-info-item">
+            <mat-icon>phone</mat-icon>
+            <span>+56 2 1234 5678</span>
+          </div>
+          <div class="contact-info-item">
+            <mat-icon>email</mat-icon>
+            <span>info@jhonax.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna 2 - Enlaces rápidos -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Inicio</a></li>
+          <li><a href="#" class="footer-link">Sobre Nosotros</a></li>
+          <li><a href="#" class="footer-link">Servicios</a></li>
+          <li><a href="#" class="footer-link">Blog</a></li>
+          <li><a href="#" class="footer-link">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3 - Servicios -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Nuestros Servicios</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Sourcing</a></li>
+          <li><a href="#" class="footer-link">Manufacturing</a></li>
+          <li><a href="#" class="footer-link">Sustainability</a></li>
+          <li><a href="#" class="footer-link">Catalog</a></li>
+          <li><a href="#" class="footer-link">Logística</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4 - Newsletter -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p class="footer-newsletter-text">
+          Suscríbete para recibir las últimas novedades y tendencias del sector textil.
+        </p>
+        <div class="footer-newsletter-form">
+          <input type="email" placeholder="Tu correo electrónico" class="newsletter-input">
+          <button class="newsletter-btn">
+            <mat-icon>send</mat-icon>
+          </button>
+        </div>
+        <div class="footer-social">
+          <h4 class="footer-col-title">Síguenos</h4>
+          <div class="social-icons">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <mat-icon>facebook</mat-icon>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <mat-icon>twitter</mat-icon>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <mat-icon>linkedin</mat-icon>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <mat-icon>instagram</mat-icon>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <mat-icon>youtube</mat-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila media - Beneficios -->
+    <div class="footer-benefits">
+      <div class="benefit-item">
+        <mat-icon>local_shipping</mat-icon>
+        <span>Envíos Internacionales</span>
+      </div>
+      <div class="benefit-divider"></div>
+      <div class="benefit-item">
+        <mat-icon>verified</mat-icon>
+        <span>Calidad Garantizada</span>
+      </div>
+      <div class="benefit-divider"></div>
+      <div class="benefit-item">
+        <mat-icon>support_agent</mat-icon>
+        <span>Soporte 24/7</span>
+      </div>
+      <div class="benefit-divider"></div>
+      <div class="benefit-item">
+        <mat-icon>payment</mat-icon>
+        <span>Múltiples Métodos de Pago</span>
+      </div>
+    </div>
+
+    <!-- Fila inferior - Copyright -->
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        &copy; 2024 JHONAX. Todos los derechos reservados.
+      </div>
+      <div class="footer-legal">
+        <a href="#" class="legal-link">Política de Privacidad</a>
+        <span class="legal-separator">|</span>
+        <a href="#" class="legal-link">Términos y Condiciones</a>
+        <span class="legal-separator">|</span>
+        <a href="#" class="legal-link">Cookies</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+        
+</div>
