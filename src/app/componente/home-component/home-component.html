@@ -31,7 +31,13 @@
       </div>
 
       <div class="hero-actions">
-        <a href="https://wa.me/51999999999" class="btn-whatsapp"> Cotizar por WhatsApp </a>
+        <a
+              href="https://wa.me/51921980957?text=Hola,%20quiero%20cotizar%20sobre%20sus%20servicios"
+              
+              class="btn-whatsapp"
+              target="_blank"
+              >Cotizar por WhatsApp</a
+            >
 
         <a href="#servicios" class="btn-services"> Ver Servicios </a>
       </div>
@@ -137,16 +143,16 @@
       </div> -->
 
         <!-- Botón CTA -->
-        <button mat-raised-button class="about-btn">
+        <!-- <button mat-raised-button class="about-btn">
           Solicitar Cotización
           <mat-icon>arrow_forward</mat-icon>
-        </button>
+        </button> -->
       </div>
 
       <!-- Contenido derecho - Imagen -->
       <div class="about-image-wrapper">
         <div class="about-image-container">
-          <img src="nosotros.jpg" alt="Sobre Nosotros" class="about-image" />
+          <img src="https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/504999766_24994429893480340_1338949324815661017_n.jpg?stp=dst-jpg_tt6&cstp=mx1358x1600&ctp=s1358x1600&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=StpSseK-hNAQ7kNvwGkFwqs&_nc_oc=Adoliwl-nbOCVoqWjvaPOaFFXBvl5jXAPcJQAxnLAYW_1SsJ-oVSEa8lCeH0GNB6x1w&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=2oLu06ESnwKZdl8SDuaCnw&_nc_ss=7b2a8&oh=00_Af_TIpW9lG1bLXAKt4ZHYmvKSDFS2E0AxmgEaZoDFUIl7w&oe=6A36985E" alt="Sobre Nosotros" class="about-image" />
           <div class="image-overlay"></div>
           <div class="image-badge">
             <mat-icon>verified_user</mat-icon>
@@ -215,9 +221,8 @@
         <h2 class="why-choose-title">¿Por qué <span class="highlight">elegirnos</span>?</h2>
         <div class="why-choose-divider"></div>
         <p class="why-choose-subtitle">
-          Más que confeccionar prendas, ayudamos a
-    nuestros clientes a proyectar una imagen
-    profesional y única.
+          Más que confeccionar prendas, ayudamos a nuestros clientes a proyectar una imagen
+          profesional y única.
         </p>
       </div>
 
@@ -225,290 +230,173 @@
         <!-- Item 1 -->
         <div class="choose-card" *ngFor="let c of choose">
           <div class="choose-card-inner">
-            <div class="choose-number">{{c.number}}</div>
+            <div class="choose-number">{{ c.number }}</div>
             <div class="choose-icon-wrapper">
               <div class="choose-icon-bg"></div>
-              <mat-icon class="choose-icon">{{c.icon}}</mat-icon>
+              <mat-icon class="choose-icon">{{ c.icon }}</mat-icon>
             </div>
-            <h4 class="choose-title">{{c.title}}</h4>
+            <h4 class="choose-title">{{ c.title }}</h4>
             <p class="choose-description">
-              {{c.description}}
+              {{ c.description }}
             </p>
             <div class="choose-hover-line"></div>
           </div>
         </div>
       </div>
 
-
       <!-- Estadísticas adicionales -->
       <div class="why-choose-stats">
         <div class="stat-block">
           <div class="stat-circle">
-            <span class="stat-number">20+</span>
+            <span class="stat-number">01</span>
           </div>
-          <span class="stat-label">Años de experiencia</span>
+          <span class="stat-label">Cotización</span>
         </div>
         <div class="stat-block">
           <div class="stat-circle">
-            <span class="stat-number">500+</span>
+            <span class="stat-number">02</span>
           </div>
-          <span class="stat-label">Clientes satisfechos</span>
+          <span class="stat-label">Diseño</span>
         </div>
         <div class="stat-block">
           <div class="stat-circle">
-            <span class="stat-number">50+</span>
+            <span class="stat-number">03</span>
           </div>
-          <span class="stat-label">Países</span>
+          <span class="stat-label">Producción</span>
         </div>
         <div class="stat-block">
           <div class="stat-circle">
-            <span class="stat-number">100%</span>
+            <span class="stat-number">04</span>
           </div>
-          <span class="stat-label">Compromiso</span>
+          <span class="stat-label">Entrega</span>
         </div>
       </div>
 
       <!-- Botón CTA -->
       <div class="why-choose-cta">
-        <button mat-raised-button class="why-choose-btn">
+        <a href="#contacto" class="why-choose-btn">
           Contáctanos
           <mat-icon>arrow_forward</mat-icon>
-        </button>
+        </a>
       </div>
     </div>
   </section>
 
-
-<section class="portfolio-section">
-
+<section id="portfolio" class="portfolio-section">
   <div class="portfolio-header">
-
-    <span class="portfolio-badge">
-      Nuestro Trabajo
-    </span>
+    <span class="portfolio-badge">Nuestro Trabajo</span>
 
     <h2 class="portfolio-title">
-
-      Proyectos que
-      <span>Hablan por Nosotros</span>
-
+      Proyectos que <span>Hablan por Nosotros</span>
     </h2>
 
     <p class="portfolio-subtitle">
-
-      Descubre algunos de nuestros trabajos
-      realizados para empresas, instituciones
-      educativas y equipos deportivos.
-
+      Descubre algunos de nuestros trabajos realizados para empresas, 
+      instituciones educativas y equipos deportivos.
     </p>
-
   </div>
-
 
   <div class="portfolio-grid">
-    
+    <div class="portfolio-card" *ngFor="let g of galery">
+      <div class="portfolio-tag" *ngIf="g.solicitado">Más Solicitado</div>
+      
+      <div class="image-container">
+        <img [src]="g.imagen" [alt]="g.title" loading="lazy" />
+      </div>
 
-  <div class="portfolio-card" *ngFor="let g of galery">
-    
-    <div class="portfolio-tag" *ngIf="g.solicitado">
-  Más solicitado
-</div>
-    <img
-      src={{g.imagen}}
-      alt="Uniformes deportivos">
-
-    <div class="portfolio-overlay">
-
-      <h4>
-        {{g.title}}
-      </h4>
-
-      <span>
-        {{g.description}}
-      </span>
-
+      <div class="portfolio-overlay">
+        <h4>{{ g.title }}</h4>
+        <p>{{ g.description }}</p>
+      </div>
     </div>
-
   </div>
-
-
-</div>
 </section>
 
-
-
-<section id="contacto" class="contact-section">
-
-  <div class="contact-header">
-
-    <span class="contact-badge">
-      Contáctanos
-    </span>
-
-    <h2 class="contact-title">
-
-      ¿Listo para
-      <span>Crear tu Proyecto?</span>
-
-    </h2>
-
-    <p class="contact-subtitle">
-
-      Solicita una cotización gratuita y recibe
-      atención personalizada para tu empresa,
-      institución o equipo deportivo.
-
-    </p>
-
-  </div>
-
-  <div class="contact-content">
-
-  <!-- Información -->
-
-  <div class="contact-info">
-
-  <h3>Información de Contacto</h3>
-
-  <div class="info-item">
-
-    <mat-icon>location_on</mat-icon>
-
-    <div>
-      <h4>Ubicación</h4>
-      <p>
-        Cajamarca - Cerca de Mega Plaza
+  <section id="contacto" class="contact-section">
+    <div class="contact-header">
+      <span class="contact-badge">Contáctanos</span>
+      <h2 class="contact-title">¿Listo para <span>Crear tu Proyecto?</span></h2>
+      <p class="contact-subtitle">
+        Solicita una cotización gratuita y recibe atención personalizada para tu empresa,
+        institución o equipo deportivo.
       </p>
     </div>
 
-  </div>
+    <div class="contact-content">
+      <!-- Información de Contacto -->
+      <div class="contact-info">
+        <h3>Información de Contacto</h3>
 
-  <div class="info-item">
+        <div class="info-item">
+          <span class="icon">📍</span>
+          <div>
+            <h4>Ubicación</h4>
+            <p>Cajamarca - San Salvador #683</p>
+          </div>
+        </div>
 
-    <mat-icon>phone</mat-icon>
+        <div class="info-item">
+          <span class="icon">📞</span>
+          <div>
+            <h4>Teléfono</h4>
+            <p>+51 921 980 957</p>
+          </div>
+        </div>
 
-    <div>
-      <h4>Teléfono</h4>
-      <p>
-        +51 999 999 999
-      </p>
+        <div class="info-item">
+          <span class="icon">📧</span>
+          <div>
+            <h4>Email</h4>
+            <p>jhonax@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/51921980957?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank" class="whatsapp-box">
+          <div class="whatsapp-content">
+            <span class="whatsapp-icon">💬</span>
+            <h4>Cotiza por WhatsApp</h4>
+            <p>Respuesta rápida y atención personalizada.</p>
+            <a
+              href="https://wa.me/51921980957?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios"
+              class="btn-whatsapp"
+              target="_blank"
+              >Escribir Ahora</a
+            >
+          </div>
+        </a>
+      </div>
+
+      <!-- Formulario -->
+      <form class="contact-form">
+        <input type="text" placeholder="Nombre" required />
+        <input type="tel" placeholder="Teléfono" required />
+
+        <select required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Uniformes Deportivos</option>
+          <option>Uniformes Corporativos</option>
+          <option>Bordados</option>
+          <option>Sublimación</option>
+          <option>Arreglos</option>
+        </select>
+
+        <textarea rows="5" placeholder="Cuéntanos tu proyecto..." required></textarea>
+
+        <button type="submit" class="btn-submit">Solicitar Cotización</button>
+      </form>
     </div>
-
-  </div>
-
-  <div class="info-item">
-
-    <mat-icon>mail</mat-icon>
-
-    <div>
-      <h4>Email</h4>
-      <p>
-        contacto@jhonax.com
-      </p>
-    </div>
-
-  </div>
-
-  <div class="whatsapp-box">
-
-  <mat-icon>
-    chat
-  </mat-icon>
-
-  <h4>
-    Cotiza por WhatsApp
-  </h4>
-
-  <p>
-    Respuesta rápida y atención personalizada.
-  </p>
-
-  <a
-    href="https://wa.me/51999999999"
-    target="_blank">
-
-    Escribir Ahora
-
-  </a>
-
-</div>
-
-</div>
-
-  <!-- Formulario -->
-
-  <form class="contact-form">
-
-  <input
-    type="text"
-    placeholder="Nombre">
-
-  <input
-    type="tel"
-    placeholder="Teléfono">
-
-  <select>
-
-    <option>
-      Selecciona un servicio
-    </option>
-
-    <option>
-      Uniformes Deportivos
-    </option>
-
-    <option>
-      Uniformes Corporativos
-    </option>
-
-    <option>
-      Bordados
-    </option>
-
-    <option>
-      Sublimación
-    </option>
-
-    <option>
-      Arreglos
-    </option>
-
-  </select>
-
-  <textarea
-    rows="5"
-    placeholder="Cuéntanos tu proyecto">
-  </textarea>
-
-  <button>
-    Solicitar Cotización
-  </button>
-
-</form>
-
-</div>
-
   </section>
 
   <section class="final-cta">
+    <h2>¿Necesitas Uniformes, Bordados o Sublimados?</h2>
 
-  <h2>
-    ¿Necesitas Uniformes,
-    Bordados o Sublimados?
-  </h2>
+    <p>Solicita tu cotización hoy mismo.</p>
 
-  <p>
-    Solicita tu cotización hoy mismo.
-  </p>
+    <a href=""> Cotizar por WhatsApp </a>
+  </section>
 
-  <a href="">
-    Cotizar por WhatsApp
-  </a>
-
-</section>
-
-
-<!--  -->
+  <!--  -->
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
@@ -520,25 +408,24 @@
             <mat-icon class="footer-logo-icon">storefront</mat-icon>
             <div class="footer-logo-text">
               <span class="footer-logo-name">JHONAX</span>
-              <span class="footer-logo-subtitle">DESKTOP • LANDING</span>
+              <span class="footer-logo-subtitle">TEXTIL • LANDING</span>
             </div>
           </div>
           <p class="footer-description">
-            Líderes en soluciones textiles de alta calidad, comprometidos con la innovación, la
-            sostenibilidad y la satisfacción de nuestros clientes a nivel global.
+            Líderes en soluciones textiles de alta calidad, comprometidos con la innovación y la satisfacción de nuestros clientes a nivel global.
           </p>
           <div class="footer-contact-info">
             <div class="contact-info-item">
               <mat-icon>location_on</mat-icon>
-              <span>Av. Industrial 123, Ciudad Textil</span>
+              <span>Jr. San Salvador 683, CAJAMARCA</span>
             </div>
             <div class="contact-info-item">
               <mat-icon>phone</mat-icon>
-              <span>+56 2 1234 5678</span>
+              <span>+51 921 980 957</span>
             </div>
             <div class="contact-info-item">
               <mat-icon>email</mat-icon>
-              <span>info@jhonax.com</span>
+              <span>jhonax@gmail.com</span>
             </div>
           </div>
         </div>
@@ -547,11 +434,12 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Enlaces Rápidos</h4>
           <ul class="footer-links">
-            <li><a href="#" class="footer-link">Inicio</a></li>
-            <li><a href="#" class="footer-link">Sobre Nosotros</a></li>
-            <li><a href="#" class="footer-link">Servicios</a></li>
-            <li><a href="#" class="footer-link">Blog</a></li>
-            <li><a href="#" class="footer-link">Contacto</a></li>
+            <li><a href="#hero" class="footer-link">Inicio</a></li>
+            <li><a href="#nosotros" class="footer-link">Sobre Nosotros</a></li>
+            <li><a href="#servicios" class="footer-link">Servicios</a></li>
+            <li><a href="#eligenos" class="footer-link">Elígenos</a></li>
+            <li><a href="#portfolio" class="footer-link">Galeria</a></li>
+            <li><a href="#contacto" class="footer-link">Contacto</a></li>
           </ul>
         </div>
 
@@ -559,11 +447,11 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Nuestros Servicios</h4>
           <ul class="footer-links">
-            <li><a href="#" class="footer-link">Sourcing</a></li>
-            <li><a href="#" class="footer-link">Manufacturing</a></li>
-            <li><a href="#" class="footer-link">Sustainability</a></li>
-            <li><a href="#" class="footer-link">Catalog</a></li>
-            <li><a href="#" class="footer-link">Logística</a></li>
+            <li><a  class="footer-link">Confecciones</a></li>
+            <li><a  class="footer-link">Arreglos</a></li>
+            <li><a  class="footer-link">Bordados</a></li>
+            <li><a  class="footer-link">Sublimados</a></li>
+            <li><a  class="footer-link">Personalizados</a></li>
           </ul>
         </div>
 
@@ -594,9 +482,7 @@
               <a href="#" class="social-link" aria-label="Instagram">
                 <mat-icon>instagram</mat-icon>
               </a>
-              <a href="#" class="social-link" aria-label="YouTube">
-                <mat-icon>youtube</mat-icon>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -606,7 +492,7 @@
       <div class="footer-benefits">
         <div class="benefit-item">
           <mat-icon>local_shipping</mat-icon>
-          <span>Envíos Internacionales</span>
+          <span>Envíos Nacionales</span>
         </div>
         <div class="benefit-divider"></div>
         <div class="benefit-item">

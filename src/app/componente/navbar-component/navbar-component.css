@@ -72,7 +72,7 @@
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.702) !important;
   font-weight: 600 !important;
   font-size: 14px !important;
   letter-spacing: 1px !important;
@@ -96,7 +96,12 @@
 
 /* Botón CONTACT desktop */
 .contact-button {
-  background: #ac870e !important;
+  background:
+  linear-gradient(
+    135deg,
+    #f5b042,
+    #e19c27
+  ) !important;
   color: #0a0c10 !important;
   font-weight: 700 !important;
   font-size: 12px !important;
@@ -106,10 +111,15 @@
   text-transform: uppercase !important;
   height: 40px !important;
   line-height: 40px !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  border-radius: 10px !important;
+
 }
 
 .contact-button:hover {
-  background: #d1a104 !important;
+  background:  rgba(255, 255, 255, 0.702)  !important;
   transform: translateY(-2px);
 }
 
@@ -186,83 +196,131 @@
 }
 
 /* ==================== MENÚ MÓVIL ==================== */
+/* ==================== MENÚ MÓVIL - VERSIÓN CORREGIDA ==================== */
 .mobile-menu-wrapper {
-  position: relative;
-}
-
-.mobile-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(4px);
-  z-index: 1040;
-  animation: fadeIn 0.3s ease;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
 }
 
+.mobile-menu-wrapper.show {
+  pointer-events: auto;
+}
+
+.mobile-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-menu-wrapper.show .mobile-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Panel del menú */
 .mobile-menu-panel {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
-  width: 280px;
-  height: 100%;
-  background: #111318;
-  z-index: 1050;
-  padding: 80px 24px 24px;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(180deg, #111318 0%, #0a0c10 100%);
+  box-shadow: -12px 0 50px rgba(0, 0, 0, 0.8);
+  padding: 90px 28px 40px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
-  animation: slideIn 0.3s ease;
+  transition: right 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+  overflow-y: auto;
+  z-index: 1050;
 }
 
+/* Cuando está abierto */
+.mobile-menu-wrapper.show .mobile-menu-panel {
+  right: 0;
+}
+
+/* Botón Cerrar */
+.mobile-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: #ddd;
+  font-size: 34px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mobile-close:hover {
+  color: #ffb300;
+  transform: rotate(90deg);
+}
+
+/* Enlaces */
 .mobile-menu-panel a {
-  color: rgba(255, 255, 255, 0.8) !important;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  letter-spacing: 1px !important;
-  text-transform: uppercase !important;
-  padding: 12px 0 !important;
-  justify-content: flex-start !important;
-  width: 100% !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.1rem;
+  padding: 16px 22px !important;
+  border-radius: 12px;
   text-align: left !important;
+  width: 100% !important;
+  transition: all 0.3s ease;
+  margin: 3px 0;
 }
 
 .mobile-menu-panel a:hover {
-  color: #f5b042 !important;
-  background: rgba(245, 176, 66, 0.1) !important;
+  background: rgba(255, 179, 0, 0.15) !important;
+  color: #fff !important;
+  transform: translateX(10px);
 }
 
-.mobile-contact-btn {
-  background: #f5b042 !important;
+/* Botón Contacto */
+.mobile-menu-panel .mobile-contact-btn {
+  background: linear-gradient(90deg, #ffb300, #ff9500) !important;
   color: #0a0c10 !important;
   font-weight: 700 !important;
-  margin-top: 20px !important;
-  border-radius: 0 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
-  width: 100% !important;
+  margin-top: 25px !important;
+  padding: 16px 24px !important;
+  border-radius: 12px !important;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(255, 179, 0, 0.4);
 }
-
-/* ==================== ANIMACIONES ==================== */
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
+/* Animaciones */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* Scrollbar personalizado (opcional pero se ve premium) */
+.mobile-menu-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mobile-menu-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 179, 0, 0.3);
+  border-radius: 10px;
 }
 
 /* ==================== AJUSTE PARA EL CONTENIDO ==================== */

@@ -13,9 +13,12 @@ import { MatIcon } from "@angular/material/icon";
 export class HomeComponent implements OnInit, OnDestroy {
 
   heroImages = [
-    "https://i.postimg.cc/PxJrhgfV/polodepotivo.jpg",
-    "https://i.postimg.cc/NFrs2RH6/ropacasual.jpg",
-    "https://i.postimg.cc/Y9P2Sdhd/ropaformal.jpg"
+    // "https://i.postimg.cc/PxJrhgfV/polodepotivo.jpg",
+    // "https://i.postimg.cc/NFrs2RH6/ropacasual.jpg",
+    // "https://i.postimg.cc/Y9P2Sdhd/ropaformal.jpg"
+    "https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/492299116_1275213077942717_6215032432168754971_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x1152&ctp=s2048x1152&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nEf3my6QUf0Q7kNvwHFvKal&_nc_oc=AdrZfrYixxBtN7uXz45mUzCOnHb4hZ9_WkhPn-dD4cGFqgXoCbb8mVTPu_Mhk49f6VY&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=s6gigOFT_eixlYWQdsARFA&_nc_ss=7b2a8&oh=00_Af_96NSUiDnICSE2iSs-c3rKekOKPJKPdIlodNUhI_tkeQ&oe=6A36B46D",
+    "https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/481242564_1221418549988837_7931566755217613327_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6lv_hJ6A53YQ7kNvwHXksyg&_nc_oc=AdrfRjA9ojKbMf9SzxzTQ3EHCZN_ti4gvN0gSCkQGI-k2l4_KPW7t-HCA9ffNSdXrTI&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=oIACqRp62aQQuxoea7soDQ&_nc_ss=7b2a8&oh=00_Af8gtQVOdesU10kusGg4IoNBzxuEHBN03kx1K-57Y-bFVQ&oe=6A36A4FD",
+    "https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/486600550_1246769254120433_5397718875715844577_n.jpg?stp=dst-jpg_tt6&cstp=mx1170x659&ctp=s1170x659&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=fGbpLNdMeJ4Q7kNvwEdnP0Z&_nc_oc=AdqxzsU4SqsUnBbVYZNKwqo9SqSvMaf9R8rF773WRMjjwPfaUkABoh1t4tTjEihbxCc&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=0MoRxUxjw5isI-wPpTt8nQ&_nc_ss=7b2a8&oh=00_Af_u_K3A8ssSZxgfyM5d_t3Oqr5qxeKdcEfUObxxL8n5Dg&oe=6A3687C0"
   ];
 
   currentImage = 0;
@@ -61,7 +64,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     },
 
     {
-      imagen:"url",
+      imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/487827940_1252011480262877_8005914392830325988_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1152x2048&ctp=s1152x2048&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tb6IlGdhDaYQ7kNvwGZ70VC&_nc_oc=Adq7WozUFZmbA6mOEZMs4rQdfVzc4vTSl9Jin3E1rHq-5ywrPc92jqAGrhFFI3DdfTs&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=CzNfFARZOX52Bb3PXLqWpw&_nc_ss=7b2a8&oh=00_Af9zfIJNt1J-0SB7AiF1Gdjh3ecjNTHjNrPTfwtg0ajSlA&oe=6A368F95",
       icon:"content_cut",
 
       number:"05",
@@ -116,29 +119,29 @@ export class HomeComponent implements OnInit, OnDestroy {
   }]
 
   galery=[{
-    imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.308",
+    imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/487281681_3131294537022292_8058242462963603374_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x900&ctp=s1600x900&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=39ShCJhPL0IQ7kNvwGQkZ3r&_nc_oc=AdoJh9JgBYqdbACL1HIfwnbAXXP5NkHfMfM9rFltnz2M0Fro0hjmmg-yiDlMPbM4Ni8&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=PKNfhgLOY5lNHMhR8wDMsg&_nc_ss=7b2a8&oh=00_Af_pnCTNGRMydmhbarArpvCP23z22cLxtJ3tYx36WIvtTg&oe=6A369546",
     title:"Uniformes Deportivos",
     description:"Equipo de fútbol",
     solicitado:true
   
   },
   {
-    imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.308",
+    imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/690649536_1628576965939658_2534037391809285887_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1992&ctp=s2048x1992&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DzuERFh1OpAQ7kNvwEV8Hq_&_nc_oc=AdrKQPt3trsI0STbLK5eXQ3Ium58EjEJvsYBQsPshDh4aMB67SqO4LCKOzhmQvtz2Jw&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=GUZQWaeps9PB1w1tKBqpBg&_nc_ss=7b2a8&oh=00_Af8UOyNYnMAy9UDIhKuA71BgzNOk-l7gky602PSdLusw0Q&oe=6A36806C",
     title:"Bordados",
     description:"Logos empresariales"
 
   },
   {
-    imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.308",
-    title:"",
-    description:""
+    imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/487818740_3131294520355627_3147159244770867865_n.jpg?stp=dst-jpg_tt6&cstp=mx900x1600&ctp=s900x1600&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=FIxA8oVp02kQ7kNvwExEgLz&_nc_oc=AdrFQvBJZGEjs6Sm2ElQx80LPiB3dR4qnli3zpKip3SPTgtEG0c7FgWK-byLIoAU1OY&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=-hNKod_d96rlkzM-WG7ZxA&_nc_ss=7b2a8&oh=00_Af-93vGP8LWR9uG4x9yxSjUxLjYY6wp4A2ZCYBWG6R6FKA&oe=6A36964C",
+    title:"Diseños Personlizados",
+    description:"Uniforme promoción enfermería"
 
 
   },
   {
-    imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.308",
-    title:"",
-    description:""
+    imagen:"https://scontent.ftru5-1.fna.fbcdn.net/v/t39.30808-6/616202314_1529083275889028_8820042260236839218_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x1152&ctp=s2048x1152&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=c-f5sqLh3rEQ7kNvwHrYzCt&_nc_oc=AdpBAI1BK45BA6OsMf6wf76klfBZMh9XcSaQhH-fAvoLz2gsfvnNymOZpE7Lyjc7ATM&_nc_zt=23&_nc_ht=scontent.ftru5-1.fna&_nc_gid=9SIFUNzKdd22RBbzqanQXg&_nc_ss=7b2a8&oh=00_Af8DRc80lm4orwKZETgDtWdCtxo9S3IUmzHY7-I_YnPeXA&oe=6A368F56",
+    title:"Sublimación",
+    description:"Polo carnavalero"
 
 
   }

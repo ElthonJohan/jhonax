@@ -16,16 +16,16 @@
       <a mat-button routerLink="/" fragment="nosotros" class="nav-link">Nosotros</a>
       <a mat-button routerLink="/" fragment="servicios" class="nav-link">Servicios</a>
       <a mat-button routerLink="/" fragment="eligenos" class="nav-link">Eligenos</a>
-      <a mat-button routerLink="/" fragment="blog" class="nav-link">Tendencias</a>
+      <a mat-button routerLink="/" fragment="portfolio" class="nav-link">Galería</a>
     </div>
 
     <!-- Acciones derecha - Siempre visibles pero diferentes en móvil/desktop -->
     <div class="actions-section">
       <!-- Botón CONTACT - Solo visible en desktop -->
-      <button mat-raised-button class="contact-button desktop-only">
-        CONTACT
+      <a mat-button routerLink="/" fragment="contacto" class="contact-button desktop-only">
+        CONTACTO
         <mat-icon>arrow_forward</mat-icon>
-      </button>
+      </a>
 
       <!-- Botón Hamburguesa - Solo visible en móvil -->
       <button mat-icon-button class="hamburger-btn mobile-only" (click)="toggleMenu()">
@@ -35,16 +35,23 @@
   </div>
 
   <!-- Menú Móvil Overlay -->
-  <div *ngIf="showMenu" class="mobile-menu-wrapper">
-    <div class="mobile-overlay" (click)="closeMenu()"></div>
-    <div class="mobile-menu-panel">
-      <a mat-button routerLink="/" fragment="nosotros" (click)="closeMenu()">Nosotros</a>
-      <a mat-button routerLink="/" fragment="servicios" (click)="closeMenu()">Servicios</a>
-      <a mat-button routerLink="/" fragment="eligenos" (click)="closeMenu()">Eligenos</a>
-      <a mat-button routerLink="/" fragment="blog" (click)="closeMenu()">Tendencias</a>
-      <button mat-raised-button class="mobile-contact-btn" (click)="closeMenu()">CONTACT</button>
-    </div>
+<div *ngIf="showMenu" class="mobile-menu-wrapper show">
+  <div class="mobile-overlay" (click)="closeMenu()"></div>
+  
+  <div class="mobile-menu-panel">
+    <button class="mobile-close" (click)="closeMenu()">✕</button>
+    
+    <a mat-button routerLink="/" fragment="nosotros" (click)="closeMenu()">Nosotros</a>
+    <a mat-button routerLink="/" fragment="servicios" (click)="closeMenu()">Servicios</a>
+    <a mat-button routerLink="/" fragment="eligenos" (click)="closeMenu()">Eligenos</a>
+    <a mat-button routerLink="/" fragment="portfolio" (click)="closeMenu()">Galería</a>
+    
+    <a mat-button routerLink="/" fragment="contacto" 
+       class="mobile-contact-btn" (click)="closeMenu()">
+      CONTACTO
+    </a>
   </div>
+</div>
 </mat-toolbar>
 
 <!-- Aquí se renderiza el contenido -->

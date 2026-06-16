@@ -27,13 +27,29 @@ export class NavbarComponent {
 
   ngOnInit() {}
 
-  toggleMenu(): void {
-    this.showMenu = !this.showMenu;
-  }
-  closeMenu(): void {
-    this.showMenu = false;
-  }
 
+toggleMenu() {
+  this.showMenu = !this.showMenu;
+  this.toggleBodyScroll();
+}
+
+closeMenu() {
+  this.showMenu = false;
+  this.toggleBodyScroll();
+}
+
+private toggleBodyScroll() {
+  if (this.showMenu) {
+    // Bloquear scroll
+    document.body.style.overflow = 'hidden';
+  } else {
+    // Restaurar scroll
+    setTimeout(() => {
+      document.body.style.overflow = 'visible';
+      document.body.style.removeProperty('overflow');
+    }, 300); // Pequeño delay para que coincida con la animación
+  }
+}
   // ==================== SOLUCIÓN AL ERROR ====================
   @HostListener('document:keydown.escape')
   onEscKeydown() {
